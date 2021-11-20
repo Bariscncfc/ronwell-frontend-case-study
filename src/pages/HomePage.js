@@ -1,5 +1,6 @@
 import React from "react";
 import Title from "../components/Title";
+import { Link } from "react-router-dom";
 
 import { gql } from "@apollo/client";
 import { useQuery } from "@apollo/client";
@@ -40,13 +41,13 @@ const HomePage = () => {
             launch.links.flickr_images[0] && (
               <div className>
                 <h3>{launch.id}</h3>
-                <button className="button">
+                <Link to="/launch/id" className="button">
                   <img
                     style={{ width: 200, height: 200, margin: 0, padding: 0 }}
                     src={launch.links.flickr_images[0]}
                     alt="launches"
                   ></img>
-                </button>
+                </Link>
               </div>
             )
         )}
