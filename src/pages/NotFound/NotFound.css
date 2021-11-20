@@ -1,0 +1,31 @@
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.error-image {
+  width: 100px;
+}
+.error-message {
+  display: flex;
+  flex-direction: column;
+  margin-left: 100px;
+}
+.home-btn {
+  background-color: white; /* Green */
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  width: 100px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.home-btn:hover {
+  background-color: black;
+  color: white;
+}
