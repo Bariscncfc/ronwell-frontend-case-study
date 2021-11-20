@@ -1,16 +1,16 @@
 import React from "react";
-import { Routes, Route, Switch } from "react-router-dom";
-import HomePage from "./pages/HomePage";
-import LaunchDetails from "./pages/LaunchDetails";
-import NotFoundPage from "./pages/NotFoundPage";
+import { Routes, Route } from "react-router-dom";
+import HomePage from "./pages/Home/HomePage";
+import LaunchDetails from "./pages/Details/LaunchDetails";
+import NotFoundPage from "./pages/NotFound/NotFoundPage";
 
 function App() {
   return (
     <div className="App">
       <Routes>
         <Route path="/" exact element={<HomePage />} />
-        <Route path="/launch/id" exact element={<LaunchDetails />} />
-        <Route path="/adsa" exact element={<NotFoundPage />} />
+        <Route path="/launch/:id" element={<LaunchDetails />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </div>
   );
