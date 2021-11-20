@@ -1,5 +1,6 @@
 import React from "react";
 import Title from "../../components/Title";
+import "./Home.css";
 import { Link } from "react-router-dom";
 
 import { gql } from "@apollo/client";
@@ -8,14 +9,11 @@ import { useQuery } from "@apollo/client";
 const LAUNCHES_QUERY = gql`
   {
     launchesPast(limit: 20) {
+      mission_name
       links {
         flickr_images
       }
       id
-      ships {
-        name
-        image
-      }
     }
   }
 `;
@@ -39,18 +37,18 @@ const HomePage = () => {
         {data.launchesPast.map(
           (launch) =>
             launch.links.flickr_images[0] && (
-              <div className>
-                <h3>{launch.id}</h3>
+              <div className="card">
                 <Link
                   to={`/launch/${launch.id}`}
                   className="button"
                   onClick={() => this.props.launch.id.push("/launch")}
                 >
                   <img
-                    style={{ width: 200, height: 200, margin: 0, padding: 0 }}
+                    className="card-image"
                     src={launch.links.flickr_images[0]}
                     alt="launches"
                   ></img>
+                  <p className="launches-name">{launch.mission_name}</p>
                 </Link>
               </div>
             )

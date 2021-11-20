@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.card {
+  border: none;
+  margin-top: 10px;
+}
+.card-image {
+  width: 300px;
+  height: 300px;
+  margin: 0;
+  padding: 0;
+  border-radius: 10px;
+}
+
+.launches-name {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  opacity: 0;
+}
+.button:hover {
+  opacity: 0.9;
+}
+.button:hover .launches-name {
+  border-radius: 10px;
+  opacity: 1;
+}
+
+@media only screen and (max-width: 576px) {
+  .card-image {
+    width: 200px;
+    height: 200px;
+  }
+}
