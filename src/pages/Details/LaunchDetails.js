@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 
 import { gql } from "@apollo/client";
 import { useQuery } from "@apollo/client";
+import Loading from "../../components/Loader/Loading";
 
 const LaunchDetails = () => {
   const { id } = useParams();
@@ -22,7 +23,7 @@ const LaunchDetails = () => {
   const { error, loading, data } = useQuery(LAUNCH_QUERY);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <Loading />;
   }
 
   if (error) {
