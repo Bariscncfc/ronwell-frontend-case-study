@@ -23,6 +23,7 @@
   text-decoration: none;
   text-align: center;
   opacity: 0;
+  font-weight: 600;
 }
 .button:hover {
   opacity: 0.9;
