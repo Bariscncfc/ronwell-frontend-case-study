@@ -4,7 +4,7 @@ SpaceX Launches is a React based web application that list spacex launches or la
 
 ## Try it live
 
-In the project directory, you can run:
+https://ronwell-frontend-case-study.vercel.app/
 
 ### Features
 
