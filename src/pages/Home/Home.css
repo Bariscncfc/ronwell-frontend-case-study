@@ -32,9 +32,12 @@
   opacity: 1;
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 600px) {
   .card-image {
-    width: 200px;
-    height: 200px;
+    width: 350px;
+    height: 260px;
+    border-radius: 12px;
+    padding-left: 5px;
+    padding-right: 5px;
   }
 }

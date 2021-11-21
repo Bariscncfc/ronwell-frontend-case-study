@@ -13,7 +13,7 @@
   margin-left: 100px;
 }
 .home-btn {
-  background-color: white; /* Green */
+  background-color: white;
   border: none;
   color: black;
   padding: 15px 32px;
@@ -28,4 +28,20 @@
 .home-btn:hover {
   background-color: black;
   color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  .error-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+  }
+  .error-message {
+    margin-left: auto;
+  }
+  .home-btn {
+    width: 50%;
+    border-radius: 10px;
+  }
 }
