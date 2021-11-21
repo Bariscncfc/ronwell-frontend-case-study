@@ -3,7 +3,7 @@ import "./Load.css";
 const Loading = () => {
   return (
     <div className="loader">
-      <div class="lds-hourglass">Loading...</div>
+      <div className="lds-hourglass">Loading...</div>
     </div>
   );
 };

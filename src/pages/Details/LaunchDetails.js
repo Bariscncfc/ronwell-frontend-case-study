@@ -31,6 +31,17 @@ const LaunchDetails = () => {
     return <div>Error</div>;
   }
   console.log(data);
+
+  function extractVideoID(url) {
+    var regExp =
+      // eslint-disable-next-line
+      /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/;
+    var match = url.match(regExp);
+    if (match && match[7].length === 11) {
+      return match[7];
+    }
+  }
+
   return (
     <div className="details">
       <Link to="/" className="back-btn">
@@ -53,10 +64,27 @@ const LaunchDetails = () => {
           </a>
         </div>
       </div>
+      <iframe
+        width="560"
+        height="315"
+        src={`https://www.youtube.com/embed/${extractVideoID(
+          data.launch.links.video_link
+        )}`}
+        title="YouTube video player"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        className="youtube-video"
+      ></iframe>
 
-      <h2>LAUNCH DETAİLS</h2>
+      <h2>LAUNCH DETAILS</h2>
       {data.launch.links.flickr_images.map((launch) => (
-        <img src={launch} alt="launchs" className="launch-image"></img>
+        <img
+          src={launch}
+          alt="launchs"
+          key={launch}
+          className="launch-image"
+        ></img>
       ))}
     </div>
   );

@@ -38,7 +38,7 @@ const HomePage = () => {
         {data.launchesPast.map(
           (launch) =>
             launch.links.flickr_images[0] && (
-              <div className="card">
+              <div className="card" key={launch.id}>
                 <Link
                   to={`/launch/${launch.id}`}
                   className="button"
