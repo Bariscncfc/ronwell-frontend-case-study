@@ -19,11 +19,7 @@ https://api.spacex.land/graphql/ (GraphQL api)
 ### Installation and Setup Instructions
 
 `npm install`  
-
-To Run Test Suite:  
-
-`npm test`  
-
+ 
 To Start Server:
 
 `npm start` 
